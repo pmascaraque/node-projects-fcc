@@ -1,5 +1,5 @@
 import axios from 'axios';
-axios.defaults.baseURL = 'https://node-course-jobs-api.onrender.com/api/v1';//API URL
+axios.defaults.baseURL = process.env.API_URL || 'http://localhost:3000/'
 
 axios.interceptors.request.use(function (req) {
   const user = localStorage.getItem('user');
